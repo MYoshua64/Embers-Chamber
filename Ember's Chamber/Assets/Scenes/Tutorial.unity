@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -97,7 +97,8 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 7026585393e4c2e46bac01ec0fd86c69,
+    type: 2}
   m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
@@ -276,7 +277,7 @@ GameObject:
   - component: {fileID: 237605283}
   - component: {fileID: 237605284}
   m_Layer: 0
-  m_Name: Point Light (1)
+  m_Name: Spot Light 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -342,7 +343,7 @@ Light:
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -854,7 +855,7 @@ GameObject:
   - component: {fileID: 1021611112}
   - component: {fileID: 1021611113}
   m_Layer: 0
-  m_Name: Point Light (6)
+  m_Name: Spot Light 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -920,7 +921,7 @@ Light:
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -928,7 +929,7 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
+  m_BounceIntensity: 0
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
@@ -1913,7 +1914,7 @@ GameObject:
   - component: {fileID: 1815111852}
   - component: {fileID: 1815111853}
   m_Layer: 0
-  m_Name: Point Light
+  m_Name: Spot Light 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1979,7 +1980,7 @@ Light:
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -2059,7 +2060,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1843495174
 Transform:
   m_ObjectHideFlags: 0
@@ -2092,7 +2093,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -2120,7 +2121,7 @@ Light:
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -2128,7 +2129,7 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
+  m_BounceIntensity: 0
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
@@ -2151,7 +2152,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1902053589
 Transform:
   m_ObjectHideFlags: 0
@@ -2184,7 +2185,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -2212,7 +2213,7 @@ Light:
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -2220,7 +2221,7 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
+  m_BounceIntensity: 0
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
@@ -3678,6 +3679,8 @@ GameObject:
   - component: {fileID: 1076759437076632321}
   - component: {fileID: 1076759437076632322}
   - component: {fileID: 1076759437076632323}
+  - component: {fileID: 1076759437076632325}
+  - component: {fileID: 1076759437076632324}
   m_Layer: 0
   m_Name: FirstDrawer
   m_TagString: Interactable
@@ -3696,8 +3699,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.6009677, y: 0.22, z: -0.47}
-  m_Center: {x: -0.007836133, y: -0.03, z: 0.16}
+  m_Size: {x: 0.6009677, y: 0.22, z: 0.011533126}
+  m_Center: {x: -0.007836124, y: -0.029999997, z: 0.017941197}
 --- !u!114 &1076759437076632322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3744,6 +3747,32 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!65 &1076759437076632324
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1076759437076632320}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.06431565, y: 0.3202325, z: 0.330139}
+  m_Center: {x: 0.26048985, y: 0.018978843, z: 0.18122834}
+--- !u!65 &1076759437076632325
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1076759437076632320}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.021828149, y: 0.21347438, z: 0.330139}
+  m_Center: {x: -0.29740623, y: -0.03440034, z: 0.18122834}
 --- !u!23 &1078235582268607186
 MeshRenderer:
   m_ObjectHideFlags: 0
