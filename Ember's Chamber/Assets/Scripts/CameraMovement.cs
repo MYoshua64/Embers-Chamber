@@ -20,9 +20,14 @@ public class CameraMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        RotateCamera();
+    }
+
+    private void RotateCamera()
+    {
         //move camera left and right
         float mouseX = Input.GetAxis("Mouse X") * mouseSens * Time.deltaTime;
-        
+
         playerBody.Rotate(Vector3.up * mouseX);
 
         //move camera up and down
