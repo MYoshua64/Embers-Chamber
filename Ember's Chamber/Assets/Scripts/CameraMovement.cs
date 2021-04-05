@@ -13,7 +13,7 @@ public class CameraMovement : MonoBehaviour
     void Start()
     {
         if (GameManager.instance.game.currentLvl != "Tutorial")
-            UiManager.instance.Lock();
+            UIManager.instance.Lock();
 
     }
 

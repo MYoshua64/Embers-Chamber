@@ -12,23 +12,13 @@ public class TutorialUI : MonoBehaviour
 
     int nextText = 0;
     bool isDoneExplain;
-    void Start()
-    {
-        
 
-    }
     public void StartTutorial()
     {
         isDoneExplain = false;
         pan_BearsTextMSG.SetActive(true);
-        UiManager.instance.UnLock();
+        UIManager.instance.UnLock();
         Next();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void Next()
@@ -41,7 +31,7 @@ public class TutorialUI : MonoBehaviour
         {
             Debug.Log("in here");
             pan_BearsTextMSG.SetActive(false);
-            UiManager.instance.Lock();
+            UIManager.instance.Lock();
         }
         if(textForTutorial.Length > nextText)
         text.text = textForTutorial[nextText];

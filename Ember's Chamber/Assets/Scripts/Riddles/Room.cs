@@ -13,12 +13,6 @@ public class Room : MonoBehaviour
         CollectAllRiddlesInRoom();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     void CollectAllRiddlesInRoom()
     {
         riddleDatas.Clear();
@@ -30,13 +24,32 @@ public class Room : MonoBehaviour
     }
     bool IsRoomSolved()
     {
-        int counter = 0;
-        while (riddleDatas[counter].getIsSolved() && counter < riddleDatas.Count)
+        //================================================
+        // CREATED BY DATE: Apr 5
+        //================================================
+
+        foreach (RiddleData data in riddleDatas)
         {
-            counter++;
+            if (!data.getIsSolved())
+            {
+                return false;
+            }
         }
-        //if everyone is solved - counter will get to the end of the list with true
-        //if one is false - loop will stop and will return false;
-        return riddleDatas[counter].getIsSolved();
+        return true;
+
+
+        //================================================
+        // CREATED BY DATE: First Semester
+        //================================================
+
+        //int counter = 0;
+
+        //while (riddleDatas[counter].getIsSolved() && counter < riddleDatas.Count)
+        //{
+        //    counter++;
+        //}
+        ////if everyone is solved - counter will get to the end of the list with true
+        ////if one is false - loop will stop and will return false;
+        //return riddleDatas[counter].getIsSolved();
     }
 }
