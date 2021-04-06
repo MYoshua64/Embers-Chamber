@@ -63,6 +63,7 @@ public class Tutorial : MonoBehaviour
 
     public void Next()
     {
+        UIManager.instance.DisableSkipButton();
         if (counter + 1 > text.Length)
         {
             UIManager.instance.CloseWindow(textMSG);

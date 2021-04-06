@@ -16,7 +16,7 @@ public class Inventory
     {
         itemDatas.Add(newItem);
         itemWasAdded.Invoke();
-        InventoryUI.instance.AddItem(newItem.pic, itemDatas.Count - 1);
+        UIManager.instance.uiInventory.AddItem(newItem.pic, itemDatas.Count - 1);
     }
 
     public void Remove(string usedItemName)

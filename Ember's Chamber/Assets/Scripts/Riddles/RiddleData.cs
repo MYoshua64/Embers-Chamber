@@ -47,4 +47,12 @@ public class RiddleData
     {
         return isSolved;
     }
+
+    //================================================
+    // CREATED BY DATE: Apr 6
+    //================================================
+
+    //need to make a way to have number combination in riddle so can be referenced to see if riddle was solved.
+    public bool doINeedCode;
+    public int[] codeToOpen;
 }

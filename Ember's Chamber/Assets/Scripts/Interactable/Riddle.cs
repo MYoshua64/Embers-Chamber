@@ -18,7 +18,11 @@ public class Riddle : Interactable
     {
         if (!riddleData.getIsSolved())
         {
-            if (riddleData.doIOpenUI)
+            if (riddleData.doINeedCode)
+            {
+                UIManager.instance.OpenCodeWindow(this);
+            }
+            else if (riddleData.doIOpenUI)
             {
                 UIManager.instance.OpenWindow(riddleData.uiToOpen);
             }
@@ -47,6 +51,10 @@ public class Riddle : Interactable
                 }
             }
         }
+        else
+        {
+            Debug.Log("Riddle already solved!");
+        }
     }
     private void GotTheNeededItem()
     {
@@ -70,5 +78,30 @@ public class Riddle : Interactable
         }
 
         return false;
+    }
+
+    public void CheckSolution(int[] code)
+    {
+        bool match = true;
+        for (int i = 0; i < code.Length && match; i++)
+        {
+            match = code[i] == riddleData.codeToOpen[i];
+        }
+        if (match)
+        {
+            Debug.Log("Code entered successfully!");
+            riddleData.setIsSolved(true);
+            //base.Interaction();
+            //if (riddleData.doIGiveItem)
+            //{
+            //    foreach (ItemData itemData in riddleData.itemRecived)
+            //        PlayerData.instance.inventory.Add(itemData);
+            //}
+            UIManager.instance.CloseCodeWindow();
+        }
+        else
+        {
+            Debug.Log("WRONG CODE!");
+        }
     }
 }

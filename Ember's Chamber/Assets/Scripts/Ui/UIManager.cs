@@ -84,24 +84,11 @@ public class UIManager : MonoBehaviour
 
     public CameraMovement cameraMovement;
 
-    public TutorialUI tutorial;
-
     private KeyCode pressedKey;
 
     public void OnClick()
     {
         soundManager.PlayClickedBtnSound();
-    }
-    public void OpenMenu(GameObject pan_panName)
-    {
-        Debug.Log("open " + pan_panName.name);
-        pan_panName.SetActive(true);
-    }
-
-    public void CloseMenu(GameObject pan_panName)
-    {
-        Debug.Log("close " + pan_panName.name);
-        pan_panName.SetActive(false);
     }
 
     public void UnLock()
@@ -113,5 +100,58 @@ public class UIManager : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
         cameraMovement.enabled = true;
+    }
+
+    //================================================
+    // CREATED BY DATE: Apr 6
+    //================================================
+
+    [SerializeField] private Button skipButton;
+
+    public void DisableSkipButton()
+    {
+        skipButton.gameObject.SetActive(false);
+    }
+
+    [System.Serializable]
+    public class InventoryUI
+    {
+        public GameObject pan_Inventory;
+        public bool isOpen;
+        public GameObject[] itemSloths;
+
+        public void OpenInventory()
+        {
+            pan_Inventory.SetActive(true);
+            isOpen = true;
+            instance.UnLock();
+        }
+        public void CloseInventory()
+        {
+            pan_Inventory.SetActive(false);
+            isOpen = false;
+            instance.Lock();
+        }
+
+        public void AddItem(Sprite image, int itemCount)
+        {
+            itemSloths[itemCount].GetComponentInChildren<Image>().sprite = image;
+        }
+    }
+
+    public InventoryUI uiInventory;
+    public CodeUI codeWindow;
+
+    public void OpenCodeWindow(Riddle sender)
+    {
+        codeWindow.gameObject.SetActive(true);
+        codeWindow.SetRiddleData(sender);
+        PlayerActions.instance.UnLock();
+    }
+
+    public void CloseCodeWindow()
+    {
+        codeWindow.gameObject.SetActive(false);
+        PlayerActions.instance.Lock();
     }
 }

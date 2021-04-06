@@ -1,29 +1,39 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class CodeUI : MonoBehaviour
 {
+    [SerializeField] private TextMeshProUGUI[] digitTexts;
 
-    public GameObject pan_Code;
-    public int[] solution;
-    
-    public void OpenPan()
-    {
-        pan_Code.SetActive(true);
-        UIManager.instance.UnLock();
-    }
-    public void ClosePan()
-    {
-        pan_Code.SetActive(false);
-        UIManager.instance.Lock();
-    }
-    public void CheckSoulotin()
-    {
+    private Riddle ownerRiddle;
+    private int[] code = new int[3];
 
-    }
-    private void Solved()
+    private void OnEnable()
     {
+        code = new int[3];
+    }
 
+    public void IncrementDigit(int index)
+    {
+        code[index] = (code[index] + 1) % 10;
+        digitTexts[index].text = code[index].ToString();
+    }
+
+    public void DecrementDigit(int index)
+    {
+        code[index] = (10 + code[index] - 1) % 10;
+        digitTexts[index].text = code[index].ToString();
+    }
+
+    public void TryOpen()
+    {
+        ownerRiddle.CheckSolution(code);
+    }
+
+    public void SetRiddleData(Riddle sender)
+    {
+        ownerRiddle = sender;
     }
 }

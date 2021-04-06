@@ -46,5 +46,8 @@ public class GameManager : MonoBehaviour
         //saveSystem.SaveGame(game);
     }
 
-
+    public void SkipTutorial()
+    {
+        Debug.Log("Done with this shet!");
+    }
 }

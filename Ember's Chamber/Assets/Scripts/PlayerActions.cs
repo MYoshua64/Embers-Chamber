@@ -31,10 +31,10 @@ public class PlayerActions : MonoBehaviour
             
             if (Input.GetKeyDown(KeyCode.I))
             {
-                if (!InventoryUI.instance.isOpen)
-                    InventoryUI.instance.OpenInventory();
+                if (!UIManager.instance.uiInventory.isOpen)
+                    UIManager.instance.uiInventory.OpenInventory();
                 else
-                    InventoryUI.instance.CloseInventory();
+                    UIManager.instance.uiInventory.CloseInventory();
             }
         }
 
