@@ -13,6 +13,10 @@ public class CodeUI : MonoBehaviour
     private void OnEnable()
     {
         code = new int[3];
+        foreach (TextMeshProUGUI digitText in digitTexts)
+        {
+            digitText.text = "0";
+        }
     }
 
     public void IncrementDigit(int index)
