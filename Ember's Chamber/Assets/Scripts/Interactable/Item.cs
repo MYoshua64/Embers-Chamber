@@ -16,9 +16,7 @@ public class Item : Interactable
 
     public override void Interaction()
     {
-        base.Interaction();
         PlayerData.instance.inventory.Add(GetItem());
         Destroy(this.gameObject);
-
     }
 }

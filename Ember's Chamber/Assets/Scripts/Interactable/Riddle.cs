@@ -91,7 +91,9 @@ public class Riddle : Interactable
         {
             Debug.Log("Code entered successfully!");
             riddleData.setIsSolved(true);
-            //base.Interaction();
+            //need to play animation of open door
+            //close code ui
+            //check if moving to other scene
             //if (riddleData.doIGiveItem)
             //{
             //    foreach (ItemData itemData in riddleData.itemRecived)
